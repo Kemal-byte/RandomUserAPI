@@ -2,6 +2,11 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { useEffect } from "react";
+import mail from "./assets/mail.svg";
+import phone from "./assets/phone.svg";
+import map from "./assets/map.svg";
+import man from "./assets/man.svg";
+import woman from "./assets/woman.svg";
 
 function App() {
   const [user, setUser] = useState({});
@@ -18,12 +23,38 @@ function App() {
   }, []);
 
   console.log(user);
+  const { cell, dob, email, name, phone, picture } = user;
   return (
-    <div className="wrapper">
-      <div className="bg1 bg"></div>
-      <div className="bg2 bg"></div>
-      <div className="container"></div>
-    </div>
+    <article className="wrapper">
+      <div className="container">
+        <div className="part1">
+          <img src={picture?.large} alt="" />
+        </div>
+        <div className="part2">
+          <h4 className="property"></h4>
+          <h2 className="data">input of property</h2>
+          <div className="hovers">
+            <div className="icon">
+              <img src={mail} alt="" />
+            </div>
+            <div className="icon">
+              <img src={mail} alt="" />
+            </div>
+            <div className="icon">
+              <img src={mail} alt="" />
+            </div>
+            <div className="icon">
+              <img src={mail} alt="" />
+            </div>
+          </div>
+          <div className="buttons">
+            <button>NEW USER</button>
+            <button>ADD USER</button>
+          </div>
+        </div>
+        <div className="ignore"></div>
+      </div>
+    </article>
   );
 }
 
