@@ -1,0 +1,23 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  height: 100%;
+}
+.wrapper {
+  height: auto;
+}
+.bg {
+  position: relative;
+  z-index: -1;
+}
+.bg1 {
+  background-color: rgb(202, 169, 3);
+  height: 40vh;
+  position: relative;
+}
+.bg2 {
+  background-color: rgb(183, 187, 191);
+  height: 60vh;
+}
