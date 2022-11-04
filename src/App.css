@@ -34,11 +34,23 @@ img {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+.part2 {
+  background-color: grey;
+  padding: 5rem 20px 10px;
+  height: 60%;
+}
 .buttons {
   display: flex;
   justify-content: space-around;
 }
+.hovers {
+  display: flex;
+  justify-content: space-around;
+}
 .icon {
+  background-color: aliceblue;
   height: 100%;
-  width: 20px;
+  width: 30px;
+  padding: 5px;
+  border-radius: 1000px;
 }
