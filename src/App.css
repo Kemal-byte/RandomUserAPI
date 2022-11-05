@@ -5,6 +5,10 @@
   min-height: 100vh;
   height: 100%;
   position: relative;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
 }
 img {
   max-width: 100%;
@@ -18,7 +22,6 @@ img {
 .container {
   width: 60%;
   background-color: aquamarine;
-  height: 60%;
 }
 .property {
   height: 50px;
@@ -28,9 +31,9 @@ img {
 }
 .part1 {
   position: relative;
-  background-color: rgb(218, 212, 202);
+  background-color: #aa96da;
   padding: 2rem;
-  height: 20%;
+  min-height: 180px;
 }
 .part1 img {
   position: absolute;
@@ -40,9 +43,9 @@ img {
   border-radius: 50%;
 }
 .part2 {
-  background-color: rgb(255, 255, 255);
+  background-color: #c5fad5;
   padding: 5rem 20px 10px;
-  height: 60%;
+  height: 100%;
 }
 .buttons {
   display: flex;
@@ -53,9 +56,19 @@ img {
   justify-content: space-around;
 }
 .icon {
-  background-color: aliceblue;
-  height: 100%;
-  width: 30px;
+  background-color: #aa96da;
+  height: 45px;
+  width: 45px;
   padding: 5px;
   border-radius: 1000px;
+}
+button {
+  border-radius: 5px;
+  border: none;
+  padding: 8px 16px;
+  background-color: #aa96da;
+  cursor: pointer;
+}
+button:active {
+  scale: 0.9;
 }

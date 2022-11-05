@@ -1,17 +1,20 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import "./Components/AddedUser.css";
 import { useEffect } from "react";
 import mail from "./assets/mail.svg";
 import phoneicon from "./assets/phone.svg";
 import map from "./assets/map.svg";
 import man from "./assets/man.svg";
 import woman from "./assets/woman.svg";
+import AddedUser from "./Components/AddedUser";
 
 function App() {
   const [user, setUser] = useState({});
   const [show, setShow] = useState("email");
   const [count, setCount] = useState(0);
+  const [save, setSave] = useState([]);
 
   useEffect(() => {
     async function getData() {
@@ -33,6 +36,7 @@ function App() {
       setUser(q[0]);
     }
     getData();
+    // console.log(user);
   }, [count]);
 
   function handleHover(event) {
@@ -46,8 +50,32 @@ function App() {
       setShow((prev) => prev);
     }
   }, [show]);
-  console.log("show value is " + show);
+  // console.log("show value is " + show);
   //
+  function handleAdd() {
+    let pass = true;
+    save.map((item) => {
+      if (item.email == user.email) {
+        pass = false;
+        return;
+      }
+    });
+    if (pass) {
+      setSave((current) => [
+        ...current,
+        {
+          name: user.name,
+          email: user.email,
+          phone: user.phone,
+          age: user.age,
+        },
+      ]);
+    }
+  }
+
+  function handleDelete() {
+    setSave([]);
+  }
 
   return (
     <article className="wrapper">
@@ -85,8 +113,10 @@ function App() {
             <button onClick={() => setCount((count) => count + 1)}>
               NEW USER
             </button>
-            <button>ADD USER</button>
+            <button onClick={handleDelete}>DELETE USERS</button>
+            <button onClick={handleAdd}>ADD USER</button>
           </div>
+          <AddedUser {...save} />
         </div>
         <div className="ignore"></div>
       </div>

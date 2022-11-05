@@ -1,0 +1,17 @@
+.user-list {
+  font-size: 1.5rem;
+  gap: 4px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  margin: 22px 0;
+}
+.title {
+  background-color: #aa96da;
+  border-bottom: 1px solid blac;
+}
+.item {
+  font-size: 1rem;
+}
+.hovers {
+  margin: 25px 0;
+}
