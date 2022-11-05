@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr;
   margin: 22px 0;
+  overflow: auto;
 }
 .title {
   background-color: #aa96da;

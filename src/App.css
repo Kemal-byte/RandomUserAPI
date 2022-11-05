@@ -22,6 +22,9 @@ img {
 .container {
   width: 60%;
   background-color: aquamarine;
+  border-radius: 3rem;
+  overflow: hidden;
+  max-width: 900px;
 }
 .property {
   height: 50px;
@@ -41,10 +44,12 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  box-shadow: 3px 3px 10px 5px rgb(0 0 0 / 80%);
+  outline: 4px solid hsla(0, 0%, 100%, 0.8);
 }
 .part2 {
   background-color: #c5fad5;
-  padding: 5rem 20px 10px;
+  padding: 5rem 20px 2rem;
   height: 100%;
 }
 .buttons {
@@ -61,6 +66,10 @@ img {
   width: 45px;
   padding: 5px;
   border-radius: 1000px;
+  box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 80%);
+}
+.icon:hover {
+  opacity: 0.6;
 }
 button {
   border-radius: 5px;
@@ -69,6 +78,26 @@ button {
   background-color: #aa96da;
   cursor: pointer;
 }
+button:hover {
+  opacity: 0.7;
+}
 button:active {
   scale: 0.9;
+}
+@media screen and (max-width: 768px) {
+  button {
+    padding: 4px 8px;
+  }
+  .buttons {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 150px;
+  }
+  button {
+    margin: 5px;
+  }
+  .title {
+    font-size: 1rem;
+  }
 }

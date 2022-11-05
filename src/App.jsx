@@ -76,6 +76,7 @@ function App() {
   function handleDelete() {
     setSave([]);
   }
+  console.log(save);
 
   return (
     <article className="wrapper">
@@ -116,9 +117,8 @@ function App() {
             <button onClick={handleDelete}>DELETE USERS</button>
             <button onClick={handleAdd}>ADD USER</button>
           </div>
-          <AddedUser {...save} />
+          {save.length > 0 && <AddedUser {...save} />}
         </div>
-        <div className="ignore"></div>
       </div>
     </article>
   );
