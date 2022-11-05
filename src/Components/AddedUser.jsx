@@ -1,16 +1,17 @@
 import React from "react";
 // import "./Addeduser.css";
 
-const AddedUser = (props) => {
+const AddedUser = ({ save }) => {
   // console.log(props);
 
   let arr = [];
+  console.log(save);
   // arr.push(props);
   // console.log(Object.keys(props));
-  Object.keys(props).forEach((key, index) => arr.push(props[key]));
+  // Object.keys(props).forEach((key, index) => arr.push(props[key]));
   // console.log(arr);
   // console.log(arr[0]);
-  let element = arr.map((item) => {
+  let element = save.map((item) => {
     return (
       <>
         <div className="item">{item.name}</div>

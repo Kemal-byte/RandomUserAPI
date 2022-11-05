@@ -117,7 +117,7 @@ function App() {
             <button onClick={handleDelete}>DELETE USERS</button>
             <button onClick={handleAdd}>ADD USER</button>
           </div>
-          {save.length > 0 && <AddedUser {...save} />}
+          {save.length > 0 && <AddedUser save={save} />}
         </div>
       </div>
     </article>
