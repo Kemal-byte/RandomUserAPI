@@ -25,6 +25,6 @@ the child component will have an one big object filled with many other object. T
 and push them into a new array so you can iterate over them. It is possible but not easy to work with objects inside of a another object.
 The easier method is to sending props as a key value then destructure it when receiving.
 
-- Here how the parent component should send a prop <AddedUser save={save} />
+- Here how the parent component should send a prop "AddedUser save={save}"
 - Here is how the child component should receieve props. const AddedUser = ({ save }) => {}
   This method is waayyyy easier to get around with.
